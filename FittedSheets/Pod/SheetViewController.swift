@@ -41,7 +41,7 @@ public class SheetViewController: UIViewController {
     private var keyboardHeight: CGFloat = 0
     
     /// The color of the overlay above the sheet. Default is a transparent black.
-    var overlayColor: UIColor = UIColor(white: 0, alpha: 0.7) {
+    var overlayColor: UIColor = UIColor(white: 0, alpha: 0.5) {
         didSet {
             if self.isViewLoaded {
                 self.view.backgroundColor = self.overlayColor
@@ -228,7 +228,7 @@ public class SheetViewController: UIViewController {
         }
         grabView.layer.cornerRadius = 3
         grabView.layer.masksToBounds = true
-        grabView.backgroundColor = UIColor(white: 0.868, alpha: 1)
+        grabView.backgroundColor = UIColor(white: 0.5, alpha: 1)
     }
     
     @objc func dismissTapped() {
@@ -378,7 +378,7 @@ public class SheetViewController: UIViewController {
                 return height
             case .fullScreen:
                 let insets = self.safeAreaInsets
-                return UIScreen.main.bounds.height - insets.top - 20
+                return UIScreen.main.bounds.height - insets.top - 44
             case .halfScreen:
                 return (UIScreen.main.bounds.height) / 2 + 24
         }
